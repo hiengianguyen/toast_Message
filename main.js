@@ -68,13 +68,9 @@ function toastMessage({
             `;
            
             main.appendChild(toast);
-            
-            
-
+  
    }
 }
-
-
 
 //headle when click btn
 successBtn.onclick = function() {
@@ -84,6 +80,3 @@ successBtn.onclick = function() {
 errorBtn.onclick = function() {
     toastMessage(toastError)
 }
-
-
-
