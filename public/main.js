@@ -1,6 +1,6 @@
 var toastSuccess = {
     tittle: "Success",
-    message: "Success, thank you for visit my code.",
+    message: "Success, thank you for visit.",
     type: 'success',
     duration: 6000,
     icon: 'fa-circle-check',
@@ -53,6 +53,7 @@ function toastMessage({
     }
     const delay = (duration / 1000).toFixed(2);
     toast.style.animation = `sideInLeft ease .5s, fadeOut 1s ${delay}s forwards`;
+    toast.style.width = "276px";
     toast.classList.add('toast', `toast-${type}`)
      toast.innerHTML = `
             <div class="toast__icon">
@@ -71,12 +72,13 @@ function toastMessage({
   
    }
 }
-
+ 
 //headle when click btn
 successBtn.onclick = function() {
     toastMessage(toastSuccess)
+    
 }
-
 errorBtn.onclick = function() {
     toastMessage(toastError)
-}
+    
+} 
