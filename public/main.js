@@ -17,14 +17,13 @@ var toastError = {
 }
 
 
-const $ = document.querySelector.bind(document)
-const $$ = document.querySelectorAll.bind(document)
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
 
-const successBtn = $('.btn__success')
-const errorBtn = $('.btn__error')
-const elementToastErr = $('.toast-error')
-const close = $('.toast__close')
-
+const successBtn = $('.btn__success');
+const errorBtn = $('.btn__error');
+const elementToastErr = $('.toast-error');
+const close = $('.toast__close');
 
 
 // function toast
@@ -37,7 +36,6 @@ function toastMessage({
     fadeOut = 1000
 }) {
    const main = document.querySelector('#toast')
-
 
    if(main) {
     const toast = document.createElement('div');
