@@ -73,12 +73,13 @@ function toastMessage({
   
    }
 }
-
+ 
 //headle when click btn
 successBtn.onclick = function() {
     toastMessage(toastSuccess)
+    
 }
-
 errorBtn.onclick = function() {
     toastMessage(toastError)
-}
+    
+} 
