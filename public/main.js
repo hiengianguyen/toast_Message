@@ -4,7 +4,8 @@ var toastSuccess = {
     type: 'success',
     duration: 6000,
     icon: 'fa-circle-check',
-    fideOut: 1000
+    fideOut: 1000,
+    width: "280px"
 }
 
 var toastError = {
@@ -13,18 +14,18 @@ var toastError = {
     type: 'error',
     duration: 5000,
     icon: 'fa-circle-xmark',
-    fideOut: 1000
+    fideOut: 1000,
+    width: "280px"
 }
 
 
-const $ = document.querySelector.bind(document)
-const $$ = document.querySelectorAll.bind(document)
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
 
-const successBtn = $('.btn__success')
-const errorBtn = $('.btn__error')
-const elementToastErr = $('.toast-error')
-const close = $('.toast__close')
-
+const successBtn = $('.btn__success');
+const errorBtn = $('.btn__error');
+const elementToastErr = $('.toast-error');
+const close = $('.toast__close');
 
 
 // function toast
@@ -34,10 +35,10 @@ function toastMessage({
     type = '', 
     duration = 3000, 
     icon = '',
-    fadeOut = 1000
+    fadeOut = 1000,
+    width = "280px"
 }) {
    const main = document.querySelector('#toast')
-
 
    if(main) {
     const toast = document.createElement('div');
@@ -53,7 +54,7 @@ function toastMessage({
     }
     const delay = (duration / 1000).toFixed(2);
     toast.style.animation = `sideInLeft ease .5s, fadeOut 1s ${delay}s forwards`;
-    toast.style.width = "276px";
+    toast.style.width = width;
     toast.classList.add('toast', `toast-${type}`)
      toast.innerHTML = `
             <div class="toast__icon">
