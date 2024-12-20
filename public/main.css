@@ -131,3 +131,13 @@ body {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
+
+.btn__success:active {
+  transform: scale(0.9);
+  background-color:rgb(97, 177, 113);
+}
+
+.btn__error:active {
+  transform: scale(0.9);
+  background-color:rgb(202, 108, 125);
+}
