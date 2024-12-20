@@ -51,6 +51,7 @@ function toastMessage({
     }
     const delay = (duration / 1000).toFixed(2);
     toast.style.animation = `sideInLeft ease .5s, fadeOut 1s ${delay}s forwards`;
+    toast.style.width = "276px";
     toast.classList.add('toast', `toast-${type}`)
      toast.innerHTML = `
             <div class="toast__icon">
